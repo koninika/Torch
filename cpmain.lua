@@ -200,7 +200,11 @@ local fx = function(x)
   -- forward, backwards
   local output = net:forward(input)
   print (output)
+<<<<<<< HEAD
   err = criterion:forward(output,{label, label*0})
+=======
+  err = criterion:forward({output[1],output[2]}, label)
+>>>>>>> dd809629eef7d895f6e5369cf04fe4080ca48b55
   local df_do = criterion:backward(output, label)
   net:backward(input, df_do)
   

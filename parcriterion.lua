@@ -1,8 +1,12 @@
+<<<<<<< HEAD
 --[[
+=======
+>>>>>>> dd809629eef7d895f6e5369cf04fe4080ca48b55
 require 'torch'
 require 'nn'
 
 input = {torch.randn(5,3), torch.randn(5,2)}
+<<<<<<< HEAD
 target = {torch.IntTensor{1,8}, torch.randn(2,10)}
 
 criterion = nn.ParallelCriterion()
@@ -39,3 +43,9 @@ output2 = criterion:forward(t3, t1)
 print(output2)
 
 --]]
+=======
+target = {}
+
+criterion = nn.ParallelCriterion()
+criterion:add()
+>>>>>>> dd809629eef7d895f6e5369cf04fe4080ca48b55
